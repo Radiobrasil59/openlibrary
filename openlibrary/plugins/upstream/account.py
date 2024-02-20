@@ -1067,7 +1067,7 @@ class my_follows(delegate.page):
             else PubSub.get_subscriptions(username)
         )
         manage = key == 'following'
-        template = render['account/follows'](mb.me, follows, manage=manage)
+        template = render['account/follows'](mb.user, follows, manage=manage)
         return mb.render(header_title=_(key.capitalize()), template=template)
 
 
